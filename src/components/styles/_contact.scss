@@ -1,0 +1,73 @@
+.formulaire{
+    width: 500px;
+    height: 350px;
+    border: 1px solid rgb(224, 222, 222);
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #input{
+        width: 350px;
+        height: 45px;
+        font-size: 16px;
+        border: 1px solid rgb(224, 222, 222);
+        border-radius: 5px;
+        font-size: 16;
+        padding-left: 30px;
+    }
+    #text-area{
+        width: 350px;
+        height: 100px;
+        @extend #input;
+    }
+    #btn-contact{
+        @extend #input;
+        font-weight: 500;
+        background-color:rgb(16, 130, 201);
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+
+        &:hover{
+            background-color:rgb(5, 102, 163);
+        }
+    }
+
+}
+
+//-----------RESPONSE
+
+// @media screen and (min-width:0px) {
+//     .formulaire{
+//         width: 320px;
+//         height: 230px;
+//         gap: 5px;
+//         #input{
+//             width: 250px;
+//             height: 40px;
+//             font-size: 16px;
+//             border: 1px solid rgb(224, 222, 222);
+//             border-radius: 5px;
+//             font-size: 16;
+//             padding-left: 30px;
+//         }
+//         #text-area{
+//             width: 250px;
+//             height: 100px;
+//             @extend #input;
+//         }
+//         #btn-contact{
+//             @extend #input;
+//             font-weight: 400;
+//             border-radius: 100px;
+//             background-color:rgb(16, 130, 201);
+//             color: white;
+//             padding: 7px;
+//             cursor: pointer;
+    
+//         }
+//     }
+// }
+
