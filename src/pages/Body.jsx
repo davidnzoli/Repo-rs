@@ -1,11 +1,40 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Contact from "../components/Contact";
+import Navbar from "./Navbar";
+import Button from "../components/Button";
 
 const Body = () => {
+  const section1 = useRef();
+  const section2 = useRef();
+  const section3 = useRef();
+
+  const targetY = (reference) => {
+    window.scrollTo({
+      top: reference.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
+
+  const [getvisible, setvisible] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", scroll);
+
+    function scroll() {
+      if (window.scrollY < 500 || window.scrollY > 1721) {
+        setvisible(false);
+      } else {
+        setvisible(true);
+      }
+      return () => {
+        window.removeEventListener("scroll", scroll);
+      };
+    }
+  }, []);
   return (
     <React.Fragment>
       <div className="body-section">
-        <div className="glob-section-one" id="accueil">
+        {getvisible && <Button />}
+        <div className="glob-section-one" id="accueil" ref={section1}>
           <div className="section-one-title">
             <h2 id="parah2">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
@@ -27,7 +56,7 @@ const Body = () => {
           </div>
         </div>
 
-        <div className="glob-section-two" id="apropos">
+        <div className="glob-section-two" id="apropos" ref={section2}>
           <div className="conten-section-two-left">
             <div className="some-texte1">
               <h1 id="title-texte1">Qui somme nous</h1>
@@ -67,12 +96,18 @@ const Body = () => {
             </div>
           </div>
         </div>
-        <div className="glob-section-tree" id="contact">
+        <div className="glob-section-tree" id="contact" ref={section3}>
           <img src="./contact2.jpg" alt="image" id="image-section-tree" />
           <div className="fomulaire">
             <Contact />
           </div>
         </div>
+        <Navbar
+          targetY={targetY}
+          section1={section1}
+          section2={section2}
+          section3={section3}
+        />
       </div>
     </React.Fragment>
   );
