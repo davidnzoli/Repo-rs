@@ -6,8 +6,12 @@ const Navbar = ({ targetY, section1, section2, section3 }) => {
       <div className="Navbar-section">
         <div className="sous-navbar">
           <div className="sous-navbar-left">
-            <img src="./icon2.jpg" alt="image.png" id="img1" />
-            {/* <img src="./menu.png" alt="image.png" id="img2"/> */}
+            <img
+              src="./icon2.jpg"
+              alt="image.png"
+              id="img1"
+              style={{ cursor: "pointer" }}
+            />
           </div>
           <div className="content-milieu">
             <ul className="content-list-glob">

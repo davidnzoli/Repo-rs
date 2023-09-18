@@ -12,7 +12,9 @@ export default function Button() {
         position: "fixed",
         top: "350px",
         right: "0px",
-        backgroundColor: "red",
+        padding: "2px",
+        borderRadius: "5px",
+        backgroundColor: "whitesmoke",
         border: "1px solid black",
         cursor: "pointer",
         transition: "all 2s ease",
@@ -21,8 +23,8 @@ export default function Button() {
     >
       <img
         style={{
-          width: "35px",
-          height: "35px",
+          width: "30px",
+          height: "30px",
           objectFit: "cover",
         }}
         src="./defil2.png"

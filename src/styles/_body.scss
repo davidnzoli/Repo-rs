@@ -8,21 +8,33 @@
   position: relative;
 
   .glob-section-one {
-    @extend .body-section;
+    // @extend .body-section;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 140px;
     width: 95%;
     height: 350px;
     gap: 50px;
 
     .section-one-title {
-      @extend .body-section;
-      width: 60%;
+      // @extend .body-section;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 140px;
+      width: 95%;
       text-align: center;
 
       #parah2 {
-        font-size: 30px;
-        font-weight: 500;
-        color: rgb(16, 130, 201);
-        letter-spacing: 1px;
+        font-size: 50px;
+        font-weight: 600;
+        color: black;
+        span {
+          color: rgb(16, 130, 201);
+        }
       }
     }
 

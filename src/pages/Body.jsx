@@ -37,10 +37,8 @@ const Body = () => {
         <div className="glob-section-one" id="accueil" ref={section1}>
           <div className="section-one-title">
             <h2 id="parah2">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
-              repudiandae mollitia ab illo inventore! Necessitatibus, alias
-              quis. Quae,orumPerferendis, totam impedit odio incidunt laudantium
-              eaque rerum nulla sed?
+              Lorem ipsum <span> dolor nulla sed?</span> sit amet adipisicing
+              elit. <span>consectetur Placeat eaque</span> rerum
             </h2>
           </div>
           <div className="some-image-post">
